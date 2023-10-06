@@ -1,6 +1,6 @@
 ---
 title: "Exploring Quarto and Latex"
-author: "Ryan Lajola"
+author: "Ryan Jhon Lee N. Lajola"
 format: pdf
 editor: visual
 number-sections: true
@@ -8,10 +8,12 @@ editor_options:
   chunk_output_type: console
 ---
 
-# Integration by Substitution
+***4.1 ANTIDIFFERENTIATION AND INDIFINITE INTEGRALS***
+
+**4.1.2 Integration by Substitution**
 
 ::: {#htm:subrule}
-## Substitution Rule
+**Theorem 4.1.11 (Substitution Rule)**
 
 If $u=g(x)$ is a differentiable function whose range is an interval $I$ and $f$ is a continuous on $I$ then,
 
@@ -21,7 +23,7 @@ $$
 :::
 
 ::: {exm:subrule}
-1.$\int \left(1-4x\right)^\frac{1}{2}dx$
+1.  $\int \left(1-4x\right)^\frac{1}{2}dx$
 
 If we let $u=1-4x$, then $du=-4dx$. We multiply the integrand $\frac{-4}{-4}$. Thus, $$
 \int \left(1-4x\right)^\frac{1}{2}dx = \int \left(1-4x\right)^\frac{1}{2}\cdot \frac{-4}{-4}dx = \int u^\frac{1}{2} \left( -\frac{du}{4} \right)= -\frac{1}{4} \int u^\frac{1}{2} du = -\frac{1}{4}\cdot \frac{2u^\frac{3}{2}}{3} + C. $$
@@ -29,25 +31,25 @@ If we let $u=1-4x$, then $du=-4dx$. We multiply the integrand $\frac{-4}{-4}$. T
 We put the final answer in terms of $x$ by substituting $u=1-4x$. Therefore, $$
 \int \left(1-4x\right)^\frac{1}{2} dx = \frac{\left(1-4x\right)^\frac{3}{2}}{6} + C.$$
 
-2.$\int x^2\left(x^3-1\right)^{10} dx$
+2.  $\int x^2\left(x^3-1\right)^{10} dx$
 
 Let $u=x^3-1$. Then $du=3x^2dx$, or $\frac{du}{3}=x^2 dx$. By substitution, $$
 \int x^2\left(x^3-1\right)^{10} dx = \int u^{10}\cdot \frac{du}{3}= \frac{1}{3}\int u^{10}du=\frac{u^{11}}{33} + C= \frac{\left(x^3-1\right)^{11}}{33}+ C.
 $$
 
-3.$\int \frac{x}{\left(x^2+1\right)^3} dx$
+3.  $\int \frac{x}{\left(x^2+1\right)^3} dx$
 
 Let $u=x^2+1$. Then $du=2xdx$, or $\frac{du}{2}=xdx$. By substitution, $$
 \int \frac{x}{\left(x^2+1\right)^3}dx=\frac{1}{2}\int u^{-3}du=\frac{1}{2}\cdot \frac{u^{-2}}{-2}+C=-\frac{1}{4\left(x^2+1\right)^2}+C.
 $$
 
-4.$\int \cos^4 x \sin xdx$
+4.  $\int \cos^4 x \sin xdx$
 
 Let $u=\cos x$. Then $du=-\sin x dx$, or $-du=\sin xdx$. By substitution, $$
 \int \cos^4 x \sin xdx=-\int u^4 du=-\frac{u^5}{5}+C=-\frac{\cos^5 x}{5}+C.
 $$
 
-5.$\int x \sec^3 \left( x^2 \right)\tan\left(x^2\right)dx$
+5.  $\int x \sec^3 \left( x^2 \right)\tan\left(x^2\right)dx$
 
 Let $u=\sec\left (x^2\right)$. Then $du=\sec\left(x^2\right)\tan\left(x^2\right)\cdot 2xdx$, or $\frac{du}{2}=\sec\left (x^2\right)\tan\left(x^2\right)\cdot xdx$. By substitution,
 
@@ -57,20 +59,20 @@ $$
 \end{aligned}
 $$
 
-6.$\int \frac{\tan\frac{1}{s}+\tan\frac{1}{s}\sin\frac{1}{s}}{s^2\cos\frac{1}{s}}ds$ Let $u=\frac{1}{s}$. Then $du=-\frac{1}{s^2}ds$ or $-du=\frac{ds}{s^2}$. By substitution, $$
-\begin{aligned}
-\int \frac{\tan\frac{1}{s}+\tan\frac{1}{s}\sin\frac{1}{s}}{s^2\cos\frac{1}{s}}ds &= -\int \frac{\tan u+\tan u \sin u}{\cos u}du\\&=-\int (\sec u \tan u + \tan^2 u)du\\&=-\int (\sec u \tan u +\sec^2 u -1 )du\\&=-(\sec u +\tan u-u) + C\\&=-\sec\frac{1}{s}-\tan\frac{1}{s}+\frac{1}{s}+C.  
-\end{aligned}
-$$
+6.  $\int \frac{\tan\frac{1}{s}+\tan\frac{1}{s}\sin\frac{1}{s}}{s^2\cos\frac{1}{s}}ds$ Let $u=\frac{1}{s}$. Then $du=-\frac{1}{s^2}ds$ or $-du=\frac{ds}{s^2}$. By substitution, $$
+    \begin{aligned}
+    \int \frac{\tan\frac{1}{s}+\tan\frac{1}{s}\sin\frac{1}{s}}{s^2\cos\frac{1}{s}}ds &= -\int \frac{\tan u+\tan u \sin u}{\cos u}du\\&=-\int (\sec u \tan u + \tan^2 u)du\\&=-\int (\sec u \tan u +\sec^2 u -1 )du\\&=-(\sec u +\tan u-u) + C\\&=-\sec\frac{1}{s}-\tan\frac{1}{s}+\frac{1}{s}+C.  
+    \end{aligned}
+    $$
 
-7.$\int t\sqrt {t-1} dt$
+7.  $\int t\sqrt {t-1} dt$
 
 Let $u=t-1$. Then $u=dt$. Also, $t=u+1$. By substitution, $$ \begin{aligned}
 \int t\sqrt{t-1} dt &=\int \left(u+1\right)u^\frac{1}{2}du =\int \left( u^\frac{3}{2}+u^\frac{1}{2} \right)du =\frac{2u^\frac{5}{2}}{5}+\frac{2u^\frac{3}{2}}{3}+C\\&=\frac{2\left(t-1\right)^\frac{5}{2}}{5}+\frac{2\left(t-1\right)^\frac{3}{2}}{3}+C.
 \end{aligned}
 $$
 
-8.$\int \frac{t^3}{\sqrt{t^2+3}}dt$
+8.  $\int \frac{t^3}{\sqrt{t^2+3}}dt$
 
 Let $u=t^2+3$. Then $du=2tdt$, or $\frac{du}{2}=tdt$. Also, $t^2=u-3$. By substitution, $$
 \begin{aligned}
@@ -78,35 +80,37 @@ Let $u=t^2+3$. Then $du=2tdt$, or $\frac{du}{2}=tdt$. Also, $t^2=u-3$. By substi
 \end{aligned}
 $$
 
-9.$\int \sqrt{4+\sqrt x}dx$
+9.  $\int \sqrt{4+\sqrt x}dx$
 
 Let $u=4+\sqrt x$. Then $du=\frac{1}{2\sqrt x}dx$ or $2du=\frac{dx}{\sqrt x}$. By substitution, $$
 \begin{aligned}
 \int \sqrt{4+\sqrt x}dx&=\int \sqrt{4+\sqrt x} \cdot\frac{\sqrt x}{\sqrt x}dx\\&=\int \sqrt{4+\sqrt x} \cdot \sqrt x\cdot \frac{dx}{\sqrt x} (\sqrt x=u-4)\\&=\int u^\frac{1}{2}\cdot (u-4)\cdot 2du\\&=\int(2u^\frac{3}{2}-8u^\frac{1}{2}) du\\&=\frac{2\cdot2u^\frac{5}{2}}5-\frac{2\cdot 8u^\frac{3}{2}}{3}+C\\&=\frac{4\left (4+\sqrt x\right)^\frac{5}{2}}{5}-\frac{16\left(4+\sqrt x\right)^\frac{3}{2}}{3}+C.
 \end{aligned}
-$$
-:::
+$$ :::
 
-::: {#htm:ParticularAntiderivatives}
-### Particular Antiderivatives
+::: {#thm:Particular_Antiderivatives}
+**4.1.3 Particular Antiderivatives**
 
 Now suppose that given a function $f(x)$, we wish to find a particular antiderivative $F(x)$ of $f(x)$ that satisfies a given condition. Such a condition is called an initial or boundary condition.
 :::
 
-::: {#exm:particular_derivatives} 1. Given that $F'(x)=2x$ and $F(2)=6$, find $F(x)$.
+::: {#exm:particular_derivatives}
+1.  Given that $F'(x)=2x$ and $F(2)=6$, find $F(x)$.
 
-```         
-Solution.
+Solution
 
 Since $F'(x)=2x$, we have $$
 F(x)=\int 2xdx=x^2+C.
-$$The initial condition $F(2)=6$ implies that $F(2)=2^2+C=6$. We get $C=2$. Therefore, the particular antiderivative that we wish to find is $$
+$$The initial condition $F(2)=6$ implies that $F(2)=2^2+C=6$. We get $C=2$. Therefore, the particular antiderivative that we wish to find is:$$
 F(x)=x^2+2.
 $$
-```
+:::
 
 2.  The slope of the the tangent line at any point $(x,y)$ on a curve is given by $3\sqrt x$. Find an equation of the curve if the point $(9,4)$ is on the curve.
 
-    Solution.
+Solution
 
-    ## Let $y=F(x)$ be an equation of the curve. The slope of the tangent line $m_{TL}$ at a point $(x,y)$
+Let $y=F(x)$ be an equation of the curve. The slope of the tangent line $m_{TL}$ at a point $(x,y)$ on the graph of the curve is given by F'(x)=$3\sqrt x$. We have
+
+
+
