@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>activity_rjllajola</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="Activity_RJLLajola_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Activity_RJLLajola_files/libs/quarto-html/quarto.js"></script>
+<script src="Activity_RJLLajola_files/libs/quarto-html/popper.min.js"></script>
+<script src="Activity_RJLLajola_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Activity_RJLLajola_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Activity_RJLLajola_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Activity_RJLLajola_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Activity_RJLLajola_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Activity_RJLLajola_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Activity_RJLLajola_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+<p>--- title: “Exploring Quarto and Latex” author: “Ryan Jhon Lee N. Lajola” format: pdf editor: visual number-sections: true editor_options: chunk_output_type: console ---</p>
+<p><strong><em>4.1 ANTIDIFFERENTIATION AND INDIFINITE INTEGRALS</em></strong></p>
+<p><strong>4.1.2 Integration by Substitution</strong></p>
+<p><strong>Theorem 4.1.11 (Substitution Rule)</strong></p>
+<p>If <span class="math inline">\(u=g(x)\)</span> is a differentiable function whose range is an interval <span class="math inline">\(I\)</span> and <span class="math inline">\(f\)</span> is a continuous on <span class="math inline">\(I\)</span> then,</p>
+<p><span class="math display">\[
+\int f(g(x))\cdot g'(x)dx = \int f(u)du
+\]</span></p>
+<ol type="1">
+<li><span class="math inline">\(\int \left(1-4x\right)^\frac{1}{2}dx\)</span></li>
+</ol>
+<p>If we let <span class="math inline">\(u=1-4x\)</span>, then <span class="math inline">\(du=-4dx\)</span>. We multiply the integrand <span class="math inline">\(\frac{-4}{-4}\)</span>. Thus, <span class="math display">\[
+\int \left(1-4x\right)^\frac{1}{2}dx = \int \left(1-4x\right)^\frac{1}{2}\cdot \frac{-4}{-4}dx = \int u^\frac{1}{2} \left( -\frac{du}{4} \right)= -\frac{1}{4} \int u^\frac{1}{2} du = -\frac{1}{4}\cdot \frac{2u^\frac{3}{2}}{3} + C. \]</span></p>
+<p>We put the final answer in terms of <span class="math inline">\(x\)</span> by substituting <span class="math inline">\(u=1-4x\)</span>. Therefore, <span class="math display">\[
+\int \left(1-4x\right)^\frac{1}{2} dx = \frac{\left(1-4x\right)^\frac{3}{2}}{6} + C.\]</span></p>
+<ol start="2" type="1">
+<li><span class="math inline">\(\int x^2\left(x^3-1\right)^{10} dx\)</span></li>
+</ol>
+<p>Let <span class="math inline">\(u=x^3-1\)</span>. Then <span class="math inline">\(du=3x^2dx\)</span>, or <span class="math inline">\(\frac{du}{3}=x^2 dx\)</span>. By substitution, <span class="math display">\[
+\int x^2\left(x^3-1\right)^{10} dx = \int u^{10}\cdot \frac{du}{3}= \frac{1}{3}\int u^{10}du=\frac{u^{11}}{33} + C= \frac{\left(x^3-1\right)^{11}}{33}+ C.
+\]</span></p>
+<ol start="3" type="1">
+<li><span class="math inline">\(\int \frac{x}{\left(x^2+1\right)^3} dx\)</span></li>
+</ol>
+<p>Let <span class="math inline">\(u=x^2+1\)</span>. Then <span class="math inline">\(du=2xdx\)</span>, or <span class="math inline">\(\frac{du}{2}=xdx\)</span>. By substitution, <span class="math display">\[
+\int \frac{x}{\left(x^2+1\right)^3}dx=\frac{1}{2}\int u^{-3}du=\frac{1}{2}\cdot \frac{u^{-2}}{-2}+C=-\frac{1}{4\left(x^2+1\right)^2}+C.
+\]</span></p>
+<ol start="4" type="1">
+<li><span class="math inline">\(\int \cos^4 x \sin xdx\)</span></li>
+</ol>
+<p>Let <span class="math inline">\(u=\cos x\)</span>. Then <span class="math inline">\(du=-\sin x dx\)</span>, or <span class="math inline">\(-du=\sin xdx\)</span>. By substitution, <span class="math display">\[
+\int \cos^4 x \sin xdx=-\int u^4 du=-\frac{u^5}{5}+C=-\frac{\cos^5 x}{5}+C.
+\]</span></p>
+<ol start="5" type="1">
+<li><span class="math inline">\(\int x \sec^3 \left( x^2 \right)\tan\left(x^2\right)dx\)</span></li>
+</ol>
+<p>Let <span class="math inline">\(u=\sec\left (x^2\right)\)</span>. Then <span class="math inline">\(du=\sec\left(x^2\right)\tan\left(x^2\right)\cdot 2xdx\)</span>, or <span class="math inline">\(\frac{du}{2}=\sec\left (x^2\right)\tan\left(x^2\right)\cdot xdx\)</span>. By substitution,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\int x\sec^3 \left(x^2\right)\tan\left(x^2\right)dx &amp;= \int \sec^2 \left(x^2\right)\sec\left(x^2\right)\tan\left(x^2\right)\cdot xdx \\ &amp;= \int u^2du=\frac{1}{2}\cdot \frac{u^3}{3}+C \\&amp; = \frac{\sec^3 \left(x^2\right)}{6} + C.
+\end{aligned}
+\]</span></p>
+<ol start="6" type="1">
+<li><p><span class="math inline">\(\int \frac{\tan\frac{1}{s}+\tan\frac{1}{s}\sin\frac{1}{s}}{s^2\cos\frac{1}{s}}ds\)</span> Let <span class="math inline">\(u=\frac{1}{s}\)</span>. Then <span class="math inline">\(du=-\frac{1}{s^2}ds\)</span> or <span class="math inline">\(-du=\frac{ds}{s^2}\)</span>. By substitution, <span class="math display">\[
+\begin{aligned}
+\int \frac{\tan\frac{1}{s}+\tan\frac{1}{s}\sin\frac{1}{s}}{s^2\cos\frac{1}{s}}ds &amp;= -\int \frac{\tan u+\tan u \sin u}{\cos u}du\\&amp;=-\int (\sec u \tan u + \tan^2 u)du\\&amp;=-\int (\sec u \tan u +\sec^2 u -1 )du\\&amp;=-(\sec u +\tan u-u) + C\\&amp;=-\sec\frac{1}{s}-\tan\frac{1}{s}+\frac{1}{s}+C.  
+\end{aligned}
+\]</span></p></li>
+<li><p><span class="math inline">\(\int t\sqrt {t-1} dt\)</span></p></li>
+</ol>
+<p>Let <span class="math inline">\(u=t-1\)</span>. Then <span class="math inline">\(u=dt\)</span>. Also, <span class="math inline">\(t=u+1\)</span>. By substitution, <span class="math display">\[ \begin{aligned}
+\int t\sqrt{t-1} dt &amp;=\int \left(u+1\right)u^\frac{1}{2}du =\int \left( u^\frac{3}{2}+u^\frac{1}{2} \right)du =\frac{2u^\frac{5}{2}}{5}+\frac{2u^\frac{3}{2}}{3}+C\\&amp;=\frac{2\left(t-1\right)^\frac{5}{2}}{5}+\frac{2\left(t-1\right)^\frac{3}{2}}{3}+C.
+\end{aligned}
+\]</span></p>
+<ol start="8" type="1">
+<li><span class="math inline">\(\int \frac{t^3}{\sqrt{t^2+3}}dt\)</span></li>
+</ol>
+<p>Let <span class="math inline">\(u=t^2+3\)</span>. Then <span class="math inline">\(du=2tdt\)</span>, or <span class="math inline">\(\frac{du}{2}=tdt\)</span>. Also, <span class="math inline">\(t^2=u-3\)</span>. By substitution, <span class="math display">\[
+\begin{aligned}
+\int \frac{t^3}{\sqrt{t^2+3}}dt &amp;= \int \frac{t^2\cdot{t}}{\sqrt {t^2+3}}dt=\int u^\frac{-1}{2}(u-3)\frac{du}{2}&amp;\\&amp;=\frac{1}{2}\int \left(u^\frac{1}{2}-3u^\frac{-1}{2}\right)du =\frac{1}{2} \left(\frac{2u^\frac{3}{2}}{3}-6u^\frac{1}{2}\right)+C \\&amp; =\frac{\left(t^2+3\right)^\frac{3}{2}}{3}-3\left(t^2+3\right)^\frac{1}{2}+C.
+\end{aligned}
+\]</span></p>
+<ol start="9" type="1">
+<li><span class="math inline">\(\int \sqrt{4+\sqrt x}dx\)</span></li>
+</ol>
+<p>Let <span class="math inline">\(u=4+\sqrt x\)</span>. Then <span class="math inline">\(du=\frac{1}{2\sqrt x}dx\)</span> or <span class="math inline">\(2du=\frac{dx}{\sqrt x}\)</span>. By substitution, <span class="math display">\[
+\begin{aligned}
+\int \sqrt{4+\sqrt x}dx&amp;=\int \sqrt{4+\sqrt x} \cdot\frac{\sqrt x}{\sqrt x}dx\\&amp;=\int \sqrt{4+\sqrt x} \cdot \sqrt x\cdot \frac{dx}{\sqrt x} (\sqrt x=u-4)\\&amp;=\int u^\frac{1}{2}\cdot (u-4)\cdot 2du\\&amp;=\int(2u^\frac{3}{2}-8u^\frac{1}{2}) du\\&amp;=\frac{2\cdot2u^\frac{5}{2}}5-\frac{2\cdot 8u^\frac{3}{2}}{3}+C\\&amp;=\frac{4\left (4+\sqrt x\right)^\frac{5}{2}}{5}-\frac{16\left(4+\sqrt x\right)^\frac{3}{2}}{3}+C.
+\end{aligned}
+\]</span></p>
+<p><strong>4.1.3 Particular Antiderivatives</strong></p>
+<p>Now suppose that given a function <span class="math inline">\(f(x)\)</span>, we wish to find a particular antiderivative <span class="math inline">\(F(x)\)</span> of <span class="math inline">\(f(x)\)</span> that satisfies a given condition. Such a condition is called an initial or boundary condition.</p>
+<ol type="1">
+<li>Given that <span class="math inline">\(F'(x)=2x\)</span> and <span class="math inline">\(F(2)=6\)</span>, find <span class="math inline">\(F(x)\)</span>.</li>
+</ol>
+<p>Solution</p>
+<p>Since <span class="math inline">\(F'(x)=2x\)</span>, we have <span class="math display">\[
+F(x)=\int 2xdx=x^2+C.
+\]</span>The initial condition <span class="math inline">\(F(2)=6\)</span> implies that <span class="math inline">\(F(2)=2^2+C=6\)</span>. We get <span class="math inline">\(C=2\)</span>. Therefore, the particular antiderivative that we wish to find is:<span class="math display">\[
+F(x)=x^2+2.
+\]</span></p>
+<ol start="2" type="1">
+<li>The slope of the the tangent line at any point <span class="math inline">\((x,y)\)</span> on a curve is given by <span class="math inline">\(3\sqrt x\)</span>. Find an equation of the curve if the point <span class="math inline">\((9,4)\)</span> is on the curve.</li>
+</ol>
+<p>Solution</p>
+<p>Let <span class="math inline">\(y=F(x)\)</span> be an equation of the curve. The slope of the tangent line <span class="math inline">\(m_{TL}\)</span> at a point <span class="math inline">\((x,y)\)</span> on the graph of the curve is given by F’(x)=<span class="math inline">\(3\sqrt x\)</span>. We have</p>
+<p><span class="math inline">\(F(x) = \int 3x^1/2dx = 2x^3/2+C\)</span>.</p>
+<p>The initial condition that <span class="math inline">\((9, 4)\)</span> is on the curve implies that <span class="math inline">\(F(9) = 2\cdot9^3/2 = 4\)</span>. We obtain <span class="math inline">\(C = -50\)</span>. Thus, an equation of the curve is</p>
+<p><span class="math inline">\(y = 2x^3/2 - 50\)</span></p>
+<p><strong>5.6 Indeterminate Forms and L’Hospitals’ Rule</strong></p>
+<p><strong>5.6.1 Indeterminate Forms of Type</strong> <span class="math inline">\(0/0\)</span> and undefined <span class="math inline">\(\infty/\infty\)</span></p>
+<p>We began this course with the concept of the limit; the behavior of a function as the independent variable approaches a certain value, or as increases or decreases without bound. We saw tangent, lines, rates of change, and areas about which the entire calculus revolves.</p>
+<p>Now, we conclude this course by revising this fundamental idea. We shall see that, with the aid of derivatives, certain limits can be evaluated more conveniently. Before proceeding, we first recall some terminology defined in the early part of this course. We can also here some techniques in evaluating limts we have previously encountered.</p>
+<p><strong>CHAPTER 5. NEW CLASSES OF FUNCTIONS AND L’HOSPITAL’S RULE</strong></p>
+<p><strong>5.6 Intermediate Forms and L’Hopital’s Rule</strong></p>
+<p><strong>5.6.1 Intermediate Forms of Type</strong> <span class="math inline">\(\frac{0}{0}\)</span> and <span class="math inline">\(\frac{\infty}{\infty}\)</span> We began this course with the concept of the limit: the behavior of a function as the independent variable approaches a certain value, or as it increases or decreases without bound. We saw tangent lines, rates of change, and areas of plane regions, as limits of certain quantities. Indeed, the concept of the limit is the central idea about which the entire calculus revolves.</p>
+<p>Now, we conclude this course by revisiting this fundamental idea. We shall see that, with the aid of derivatives, certain limits can be evaluated more conveniently. Before proceeding, we first recall some terminology defined in the early part of this course. We also recall here some techniques in evaluating limits we have previously encountered.</p>
+<p>Definition 5.6.1 The <span class="math inline">\(\lim _{x \rightarrow a} \frac{f(x)}{g(x)}\)</span> is an indeterminate form of type</p>
+<p>1. <span class="math inline">\(\frac{0}{0}\)</span> if <span class="math inline">\(\displaystyle\lim_{x \to a} f(x) = \displaystyle\lim_{x \to a} g(x)=0\)</span></p>
+<p>2. <span class="math inline">\(\frac{\infty}{\infty}\)</span> if <span class="math inline">\(\displaystyle\lim_{x \to a} f(x)\)</span> and <span class="math inline">\(\displaystyle\lim_{x \to a} g(x)\)</span> are both <span class="math inline">\(+\infty\)</span> or <span class="math inline">\(-\infty\)</span>.</p>
+<p>Of course, <span class="math inline">\("x \to a"\)</span> may be replaced by <span class="math inline">\("x \to a^+"\)</span>, <span class="math inline">\("x \to a^-"\)</span>, <span class="math inline">\("x \to +\infty"\)</span> or <span class="math inline">\("x \to -\infty"\)</span>.</p>
+<p>Example 5.6.2 Evaluate the following limits.</p>
+<p>1. <span class="math inline">\(\displaystyle\lim_{x \to 0} \frac{x^2-3x}{2x^2+x}\)</span> <span class="math inline">\(\left(\frac{0}{0}\right)\)</span></p>
+<p>Solution. <span class="math display">\[
+    \displaystyle\lim_{x \to 0} \frac{x^2-3x}{2x^2+x}= \displaystyle\lim_{x \to 0} \frac{x(x-3)}{x(2x+1)}=\displaystyle\lim_{x \to 0} \frac{x-3}{2x+1}=-3
+    \]</span> 2. <span class="math inline">\(\displaystyle\lim_{x \to 0} \frac{\sin5x}{\sin3x}\)</span> <span class="math inline">\(\left(\frac{0}{0}\right)\)</span></p>
+<p>Solution. <span class="math display">\[
+    \displaystyle\lim_{x \to 0} \frac{\sin5x}{\sin3x}=\displaystyle\lim_{x \to 0} \left(\frac{\sin5x}{5x}\right)\left(\frac{3x}{\sin3x}\right)\left(\frac{5}{3}\right)=1\cdot1\cdot\frac{5}{3}=\frac{5}{3}
+    \]</span> 3. <span class="math inline">\(\displaystyle\lim_{x \to 2} \frac{x^2+3x-10}{x^2-4x+4}\)</span> <span class="math inline">\(\left(\frac{0}{0}\right)\)</span></p>
+<p>Solution. <span class="math display">\[
+    \begin{aligned}
+    \displaystyle\lim_{x \to 2} \frac{x^2+3x-10}{x^2-4x+4}&amp;=\displaystyle\lim_{x \to 2}\frac{(x+5)(x-2)}{(x-2)^2}\\&amp;=\displaystyle\lim_{x \to 2}\frac{x+5}{x-2}\\&amp;=-\infty
+    \end{aligned}
+    \]</span> 4. <span class="math inline">\(\displaystyle\lim_{x \to +\infty}\frac{3x-1}{7-6x}\)</span> <span class="math inline">\(\left(\frac{+\infty}{-\infty}\right)\)</span></p>
+<p>Solution. <span class="math display">\[
+    \displaystyle\lim_{x \to +\infty}\frac{3x-1}{7-6x}=\displaystyle\lim_{x \to +\infty}\frac{3x-1}{7-6x}\cdot \frac{\frac{1}{x}}{\frac{1}{x}}=\displaystyle\lim_{x \to +\infty}\frac{3-\frac{1}{x}}{\frac{7}{x}-6}=-\frac{1}{2}
+    \]</span></p>
+<p>5.6.2 L’Hospital’s Rule The following theorem tells us how derivatives can be used to evaluate limits that are indeterminate of type <span class="math inline">\(\frac{0}{0}\)</span> or <span class="math inline">\(\frac{\infty}{\infty}\)</span>. It usually referred to as L’Hospital’s Rule, after the French mathematician Guillaume Francois Marquis de L’Hospital.</p>
+<p>Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be functions differentiable on an open interval <span class="math inline">\(I\)</span> containing <span class="math inline">\(a\)</span> except possibly at <span class="math inline">\(a\)</span> and <span class="math inline">\(g'(x)\ne 0\)</span> for all <span class="math inline">\(x \in I \setminus {a}\)</span>. If <span class="math inline">\(\displaystyle\lim_{x \to a}\frac{f(x)}{g(x)}\)</span> is indeterminate of type <span class="math inline">\(\frac{0}{0}\)</span> or <span class="math inline">\(\frac{\infty}{\infty}\)</span>, then <span class="math display">\[
+\displaystyle\lim_{x \to a}\frac{f(x)}{g(x)}=\displaystyle\lim_{x \to a}\frac{f'(x)}{g'(x)}
+\]</span> provided <span class="math inline">\(\displaystyle\lim_{x \to a}\frac{f'(x)}{g'(x)}\)</span> exists or <span class="math inline">\(\displaystyle\lim_{x \to a}\frac{f'(x)}{g'(x)}=\pm \infty\)</span>.</p>
+<p>Remarks L’Hospital’s Rule, with suitable modifications, is valid if <span class="math inline">\("x \to a"\)</span> is replaced by <span class="math inline">\("x \to a^+"\)</span>, <span class="math inline">\("x \to a^-"\)</span>, <span class="math inline">\("x \to +\infty"\)</span> or <span class="math inline">\("x \to -\infty"\)</span>.</p>
+<p>Example Evaluate the following limits.</p>
+<ol type="1">
+<li><span class="math inline">\(\displaystyle\lim_{x \to 0} \frac{x^2-3x}{2x^2+x}\)</span> <span class="math inline">\(\frac{0}{0}\)</span></li>
+</ol>
+<p>Solution. <span class="math display">\[
+\displaystyle\lim_{x \to 0} \frac{x^2-3x}{2x^2+x}=\displaystyle\lim_{x \to 0} \frac{D_x\left(x^2-3x\right)}{D_y\left(2x^2+x\right)}=\displaystyle\lim_{x \to 0} \frac{2x-3}{4x+1}=-3
+\]</span></p>
+<ol start="2" type="1">
+<li><span class="math inline">\(\displaystyle\lim_{x \to 0} \frac{\sin5x}{\sin3x}\)</span> <span class="math inline">\(\left(\frac{0}{0}\right)\)</span></li>
+</ol>
+<p>Solution. <span class="math display">\[
+    \displaystyle\lim_{x \to 0} \frac{\sin5x}{\sin3x}=\displaystyle\lim_{x \to 0} \frac{5\cos5x}{3\cos3x}=\frac{5}{3}
+    \]</span></p>
+<ol start="3" type="1">
+<li><span class="math inline">\(\displaystyle\lim_{x \to 2^-} \frac{x^2+3x-10}{x^2-4x+4}\)</span> <span class="math inline">\(\left(\frac{0}{0}\right)\)</span></li>
+</ol>
+<p>Solution. <span class="math display">\[
+    \begin{aligned}
+    \displaystyle\lim_{x \to 2^-} \frac{x^2+3x-10}{x^2-4x+4}&amp;=\displaystyle\lim_{x \to 2^-}\frac{2x+3}{2x-4}\\&amp;\\&amp;=-\infty
+    \end{aligned}
+    \]</span></p>
+<ol start="4" type="1">
+<li><span class="math inline">\(\displaystyle\lim_{x \to +\infty}\frac{3x-1}{7-6x}\)</span> <span class="math inline">\(\left(\frac{+\infty}{-\infty}\right)\)</span></li>
+</ol>
+<p>Solution. <span class="math display">\[
+    \displaystyle\lim_{x \to +\infty}\frac{3x-1}{7-6x}=\displaystyle\lim_{x \to +\infty} \frac{3}{-6}=-\frac{1}{2}
+    \]</span></p>
+<ol start="5" type="1">
+<li><span class="math inline">\(\displaystyle\lim_{x \to 1} \frac{x^3-3x+2}{1-x+\ln x}\)</span> <span class="math inline">\(\left(\frac{0}{0}\right)\)</span></li>
+</ol>
+<p>Solution. <span class="math display">\[
+    \begin{aligned}
+    \displaystyle\lim_{x \to 1} \frac{x^3-3x+2}{1-x+\ln x}&amp;=\displaystyle\lim_{x \to 1}\frac{3x^2-3}{-1+\frac{1}{x}}\\&amp;=\displaystyle\lim_{x \to 1}\frac{6x}{-\frac{1}{x^2}}\\&amp;=-6
+    \end{aligned}
+    \]</span></p>
+<ol start="6" type="1">
+<li><span class="math inline">\(\displaystyle\lim_{x \to 0^-}\frac{\csc x}{1-\cot x}\)</span> <span class="math inline">\(\left(\frac{-\infty}{+\infty}\right)\)</span></li>
+</ol>
+<p>Solution. <span class="math display">\[
+    \begin{aligned}
+    \displaystyle\lim_{x \to 0^-}\frac{\csc x}{1-\cot x}&amp;=\displaystyle\lim_{x \to 0^-}\frac{-\csc x \cot x}{\csc^2 x}\\&amp;=\displaystyle\lim_{x \to 0^-}\frac{-\cot x}{\csc x}\\&amp;=\displaystyle\lim_{x \to 0^-} \frac{\csc^2 x}{-\csc x \cot x}\\&amp;=\displaystyle\lim_{x \to 0^-}\frac{\csc x}{-\cot x}\\&amp;=\displaystyle\lim_{x \to 0^-}\frac{-\cot x}{\csc x}
+    \end{aligned}
+    \]</span></p>
+<p>Observe that the expression in the last line above is exactly the same as the expression in the second line. Hence, continued application of L’Hospital’s Rule here will just lead to an infinite string of equations and will not help us evaluate the limit. This example should make you realize that L’Hospital’s Rule is not always helpful. Sometimes, we just have to use some old-fashioned tricks. For instance, we evaluate this limit by simply manipulating the given expression to obtain a simpler expression:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\displaystyle\lim_{x \to 0^-}\frac{\csc x}{1-\cot x}&amp;=\displaystyle\lim_{x \to 0^-}\frac{\frac{1}{\sin x}}{1-\frac{\cos x}{\sin x}}\\&amp;=\displaystyle\lim_{x \to 0^-}\frac{1}{\sin x-\cos x}\\&amp;=-1
+\end{aligned}
+\]</span></p>
+<p>It is imperative to remember the behavior of each function introduced in this course; doing so will help us in computing new limits. Recalling the graphs of our new functions will be helpful in remembering their behavior. For instance, using the graph of <span class="math inline">\(f(x)=\log_a x\)</span>, where $ 0&lt; a &lt; 1$, one sees that <span class="math inline">\(\displaystyle\lim_{x \to 0^+}\log_a x=+\infty\)</span>. Thus if <span class="math inline">\(f(x)\)</span> approaches <span class="math inline">\(0\)</span> through positive values <span class="math inline">\(x\)</span> approaches <span class="math inline">\(k\)</span>, then <span class="math display">\[
+\displaystyle\lim_{x \to k}\log_a[f(x)]=\displaystyle\lim_{y \to 0^+}\log_a y=+\infty.
+\]</span></p>
+<p>Solution</p>
+<p>Note that since <span class="math inline">\(x+\sin x \ge x - 1\)</span> for any <span class="math inline">\(x \in R\)</span> and <span class="math inline">\(\displaystyle\lim_{x \to +\infty} {x-1=+\infty}\)</span>, then <span class="math inline">\(\displaystyle\lim_{x \to +\infty}{x + \sin x = +\infty}\)</span> as well. Thus, the limit is indeterminate of type <span class="math inline">\(\left(\frac{\infty}{\infty}\right)\)</span>.</p>
+<p>However, <span class="math inline">\(\displaystyle\lim_{x \to +\infty}{\frac{D_x(x+\sin x)}{D_x(x)}=\displaystyle\lim_{x \to +\infty}\frac{1+\cos x}{1}}\)</span> does not exist <span class="math inline">\(\cos x\)</span> does not approach any particular value as <span class="math inline">\(x\to +\infty\)</span>. Neither does <span class="math inline">\(1+\cos x\)</span> grow without bound. Thus, L’Hospital’s Rule does not apply.</p>
+<p>We therefore need to employ other techniques. In particular, notice that any <span class="math inline">\(x&gt; 0\)</span>, the following hold:</p>
+<p><span class="math display">\[
+\begin{aligned}
+x-1 &amp; \le x+\sin x \le x+1 \\
+\Leftrightarrow\frac{x-1}{x} &amp; \le x+\sin x \le \frac {x+1}{x}\\
+\end{aligned}
+\]</span></p>
+<p>Also, <span class="math inline">\(\displaystyle\lim_{x\to+\infty}{\frac{x-1}{x}=1=\displaystyle\lim_{x\to+\infty}{\frac{x+1}{x}}}\)</span>, so by the Squeeze Theorem, <span class="math inline">\(\displaystyle\lim_{x\to+\infty}{\frac{x+\sin x}{x}=1}\)</span>.</p>
+<p>Indeterminate Forms of Type <span class="math inline">\(0\cdot \infty\)</span> and <span class="math inline">\(\infty -\infty\)</span></p>
+<p>Definition</p>
+<p>The <span class="math inline">\(\displaystyle\lim_{x\to a}{f(x)g(x)}\)</span> is an indeterminate form of type <span class="math inline">\(0\cdot \infty\)</span> if either <span class="math display">\[
+\displaystyle\lim_{x\to a}{f(x)=0}\]</span> and <span class="math inline">\(\displaystyle\lim_{x\to a}{g(x)=+\infty}\)</span> or <span class="math inline">\(-\infty\)</span>, or</p>
+<p><span class="math display">\[
+\displaystyle\lim_{x\to a}{f(x)=+\infty}
+\]</span> or <span class="math inline">\(-\infty\)</span> and <span class="math inline">\(\displaystyle\lim_{x\to a}{g(x)=0}\)</span>.</p>
+<p>The <span class="math inline">\(\displaystyle\lim_{x\to a}{f(x)g(x)}\)</span> is an indeterminate form of type <span class="math inline">\(\infty - \infty\)</span> if either</p>
+<p><span class="math display">\[
+\displaystyle\lim_{x\to a}{f(x)=+\infty}
+\]</span> and <span class="math inline">\(\displaystyle\lim_{x\to a}{g(x)=+\infty}\)</span> or <span class="math inline">\(-\infty\)</span>, or</p>
+<p><span class="math display">\[
+\displaystyle\lim_{x\to a}{f(x)=-\infty}
+\]</span> and <span class="math inline">\(\displaystyle\lim_{x\to a}{g(x)=+\infty}\)</span>.</p>
+<p>Remark L’Hospital’s Rule works only for indeterminate forms of type <span class="math inline">\(\frac{0}{0}\)</span> and <span class="math inline">\(\frac{\infty}{\infty}\)</span>. Any other indeterminate form must be expressed equivalently in one of these two forms if we wish to apply L’Hospital’s Rule. For the new indeterminate forms described above, these conversions can be performed as described below.</p>
+<p>If <span class="math inline">\(\displaystyle\lim_{x\to a}{f(x)=0}\)</span> and <span class="math inline">\(\displaystyle\lim_{x\to a}{g(x)=+\infty}\)</span> or <span class="math inline">\(-\infty\)</span>, write <span class="math inline">\(\displaystyle\lim_{x\to a}{f(x)g(x)}\)</span> as:</p>
+<p><span class="math inline">\(\displaystyle\lim_{x\to a}{\frac{f(x)}{\frac{1}{g(x)}}}\)</span>, which is indeterminate of type <span class="math inline">\(\frac{0}{0}\)</span>, or</p>
+<p><span class="math inline">\(\displaystyle\lim_{x\to a}{\frac{g(x)}{\frac{1}{f(x)}}}\)</span>, which is indeterminate of type <span class="math inline">\(\frac{\infty}{\infty}\)</span> and apply L’Hospital’s Rule</p>
+<p>If <span class="math inline">\(\displaystyle\lim_{x\to a}{f(x)+g(x)}\)</span> is indeterminate of type <span class="math inline">\(\infty - \infty\)</span>, rewrite <span class="math inline">\(f(x)+g(x)\)</span> as a single expression to obtain an indeterminate form of type <span class="math inline">\(\frac{0}{0}\)</span> or <span class="math inline">\(\frac{\infty}{\infty}\)</span> and apply L’Hospital’s Rule.</p>
+<p>Example Evaluate the following limits.</p>
+<p><span class="math inline">\(\displaystyle\lim_{x\to 0^+}{\sin^{-1} (2x) \csc x}\)</span> <span class="math inline">\((0\cdot +\infty)\)</span></p>
+<p>Solution</p>
+<p><span class="math display">\[
+\begin{aligned}
+\displaystyle\lim_{x\to 0^+}{\sin^{-1} (2x) \csc x} &amp;=\displaystyle\lim_{x\to 0^+}{\frac{\sin^{-1} (2x)}{\sin x}}\\&amp;=\displaystyle\lim_{x\to 0^+}{\frac{1}{\sqrt{1-4x^2}}}\cdot (2) \\&amp;=\frac{2}{1}\\&amp;=2
+\end{aligned}
+\]</span> 2. <span class="math inline">\(\displaystyle\lim_{0\to \frac{\pi}{2}^-}{\tan \theta \ln (\sin \theta)}\)</span> <span class="math inline">\(+\infty \cdot 0\)</span></p>
+<p>Solution</p>
+<p><span class="math display">\[
+\begin{aligned}
+\displaystyle\lim_{\theta\to \frac{\pi}{2}^-}{\tan \theta \ln (\sin \theta)}&amp;=\displaystyle\lim_{\theta \to \frac{\pi}{2}^-}{\frac {\ln (\sin \theta)}{\cot \theta}}\\&amp;=\displaystyle\lim_{\theta\to \frac{\pi}{2}^-}{\frac{\left(\frac {1}{\sin \theta}\right)\cos \theta}{-\csc^2 \theta}}\\&amp;=\displaystyle\lim_{\theta\to \frac{\pi}{2}^-}{-\sin \theta\cos \theta}\\&amp;=-1(0)\\&amp;=0
+\end{aligned}
+\]</span> 3. <span class="math inline">\(\displaystyle\lim_{x\to 1^+}{\left(\frac{x}{x-1}-\frac{1}{\ln x}\right)}\)</span> <span class="math inline">\(\left(\frac{1}{0^+}-\frac{1}{0^+}\right)\)</span></p>
+<p>Solution</p>
+<p><span class="math display">\[
+\begin{aligned}
+\displaystyle\lim_{x\to 1^+}{\left(\frac{x}{x-1}-\frac{1}{\ln x}\right)}&amp;=\displaystyle\lim_{x\to 1^+}{\frac{x\ln x -(x-1)}{(x-1)\ln x}}\\&amp;=\displaystyle\lim_{x\to 1^+}{\frac{x\cdot \frac{1}{x}+\ln x-1}{(x-1)\cdot \frac{1}{x}+\ln x}}\\&amp;=\displaystyle\lim_{x\to 1^+}{\frac{\frac{1}{x}}{\frac{1}{x^2}+\frac{1}{x}}}\\&amp;=\frac{1}{2}
+\end{aligned}
+\]</span></p>
+<p>Indeterminate Forms of Type</p>
+<p>Indeterminate Forms of Type <span class="math inline">\(1^\infty\)</span>, <span class="math inline">\(0^\infty\)</span> and <span class="math inline">\(\infty ^0\)</span></p>
+<p>Definition Let <span class="math inline">\(f\)</span> be a nonconstant function. The <span class="math inline">\(\displaystyle\lim_{x\to a}{f(x)^{g(x)}}\)</span> is an indeterminate form of type</p>
+<ol type="1">
+<li><p><span class="math inline">\(1^\infty\)</span> if <span class="math inline">\(\displaystyle\lim_{x\to a}{f(x)=1}\)</span> and <span class="math inline">\(\displaystyle\lim_{x\to a}{g(x)=+\infty}\)</span> or <span class="math inline">\(-\infty\)</span>.</p></li>
+<li><p><span class="math inline">\(0^\infty\)</span> if <span class="math inline">\(\displaystyle\lim_{x\to a}{f(x)=0}\)</span>, through positive values, and <span class="math inline">\(\displaystyle\lim_{x\to a}{g(x)=0}\)</span>.</p></li>
+<li><p><span class="math inline">\(\infty ^0\)</span> if <span class="math inline">\(\displaystyle\lim_{x\to a}{f(x)=+\infty}\)</span> and <span class="math inline">\(\displaystyle\lim_{x\to a}{g(x)=0}\)</span>.</p></li>
+</ol>
+<p>Remark If <span class="math inline">\(\displaystyle\lim_{x\to a}{f(x)^{g(x)}}\)</span> is indeterminate of type <span class="math inline">\(1^\infty\)</span>, <span class="math inline">\(0^\infty\)</span> and <span class="math inline">\(\infty ^0\)</span>, we write</p>
+<p><span class="math display">\[
+\displaystyle\lim_{x\to a}{f(x)^{g(x)}}=\displaystyle\lim_{x\to a}{e^{g(x) \ln [f(x)]}}
+\]</span> and evaluate <span class="math inline">\(\displaystyle\lim_{x\to a}{g(x) \ln [f(x)]}\)</span> first. Then, if</p>
+<ol type="1">
+<li><p><span class="math inline">\(\displaystyle\lim_{x\to a}{g(x) \ln [f(x)]}=L \in R\)</span>, then <span class="math inline">\(\displaystyle\lim_{x\to a}{f(x)^{g(x)}}=e^L\)</span>.</p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x\to a}{g(x) \ln [f(x)]}=+\infty\)</span>, then <span class="math inline">\(\displaystyle\lim_{x\to a}{f(x)^{g(x)}}=+\infty\)</span>.</p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x\to a}{g(x) \ln [f(x)]}=-\infty\)</span>, then <span class="math inline">\(\displaystyle\lim_{x\to a}{f(x)^{g(x)}}=0\)</span>.</p></li>
+</ol>
+<p>Example Evaluate the following limits.</p>
+<ol type="1">
+<li><span class="math inline">\(\displaystyle\lim_{x\to 0^+}{x^{\sin x}}\)</span> <span class="math inline">\(0^0\)</span></li>
+</ol>
+<p>Solution</p>
+<p>First, write <span class="math inline">\(x^{\sin x}=e^{\sin x \ln x}\)</span>. Evaluate first <span class="math inline">\(\displaystyle\lim_{x\to 0^+}{\sin x \ln x}\)</span>.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\displaystyle\lim_{x\to 0^+}{\sin x \ln x}\\&amp;=\displaystyle\lim_{x\to 0^+}{\frac{\ln x}{\csc x}}\\&amp;=\displaystyle\lim_{x\to 0^+}{\frac{\frac{1}{x}}{-\csc x \cot x}}\\&amp;=\displaystyle\lim_{x\to 0^+}{\frac{-\sin^2 x}{x \cos x}}\\&amp;=\displaystyle\lim_{x\to 0^+}{\frac{-2\sin x \cos x}{x(-\sin x)+\cos x}}\\&amp;=0.
+\end{aligned}
+\]</span> Hence, <span class="math inline">\(\displaystyle\lim_{x\to 0^+}{x^{\sin x}}=e^0=1\)</span>.</p>
+<ol start="2" type="1">
+<li><span class="math inline">\(\displaystyle\lim_{x\to +\infty}{\left(1-\frac{3}{x}\right)^{2x}}\)</span> <span class="math inline">\(1^\infty\)</span></li>
+</ol>
+<p>Solution</p>
+<p><span class="math inline">\(\left(1-\frac{3}{x}\right)^{2x}=e^{2x\ln \left(1-\frac{3}{x}\right)}\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\displaystyle\lim_{x\to +\infty}{2x ln \left(1-\frac{3}{2}\right)}\\
+&amp;=\displaystyle\lim_{x\to +\infty}{\frac{ln \left(1-\frac{3}{x}\right)}{\frac{1}{2x}}}\\
+&amp;=\displaystyle\lim_{x\to +\infty}\frac{{\frac{1}{1-\frac{3}{x}}}\cdot \left(\frac{3}{x^2}\right)}{-\frac{1}{2x^2}}\\
+&amp;=\displaystyle\lim_{x\to +\infty}{\frac{-6}{1-\frac{3}{x}}}\\
+&amp;=-6.
+\end{aligned}
+\]</span> Hence, <span class="math inline">\(\displaystyle\lim_{x\to +\infty}{\left(1-\frac{3}{x}\right)^{2x}}=e^{-6}\)</span>.</p>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
