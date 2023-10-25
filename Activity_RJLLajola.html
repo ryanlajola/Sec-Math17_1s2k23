@@ -58,7 +58,7 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li><span class="math inline">\(\int \left(1-4x\right)^\frac{1}{2}dx\)</span></li>
 </ol>
-<p>If we let <span class="math inline">\(u=1-4x\)</span>, then <span class="math inline">\(du=-4dx\)</span>. We multiply the integrand <span class="math inline">\(\frac{-4}{-4}\)</span>. Thus, <span class="math display">\[
+<p>If we let <span class="math inline">\(u = 1 - 4x\)</span>, then <span class="math inline">\(du=-4dx\)</span>. We multiply the integrand <span class="math inline">\(\frac{-4}{-4}\)</span>. Thus, <span class="math display">\[
 \int \left(1-4x\right)^\frac{1}{2}dx = \int \left(1-4x\right)^\frac{1}{2}\cdot \frac{-4}{-4}dx = \int u^\frac{1}{2} \left( -\frac{du}{4} \right)= -\frac{1}{4} \int u^\frac{1}{2} du = -\frac{1}{4}\cdot \frac{2u^\frac{3}{2}}{3} + C. \]</span></p>
 <p>We put the final answer in terms of <span class="math inline">\(x\)</span> by substituting <span class="math inline">\(u=1-4x\)</span>. Therefore, <span class="math display">\[
 \int \left(1-4x\right)^\frac{1}{2} dx = \frac{\left(1-4x\right)^\frac{3}{2}}{6} + C.\]</span></p>
@@ -112,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
 <ol start="9" type="1">
 <li><span class="math inline">\(\int \sqrt{4+\sqrt x}dx\)</span></li>
 </ol>
-<p>Let <span class="math inline">\(u=4+\sqrt x\)</span>. Then <span class="math inline">\(du=\frac{1}{2\sqrt x}dx\)</span> or <span class="math inline">\(2du=\frac{dx}{\sqrt x}\)</span>. By substitution, <span class="math display">\[
+<p>Let <span class="math inline">\(u = 4 + \sqrt x\)</span>. Then <span class="math inline">\(du=\frac{1}{2\sqrt x}dx\)</span> or <span class="math inline">\(2du=\frac{dx}{\sqrt x}\)</span>. By substitution, <span class="math display">\[
 \begin{aligned}
 \int \sqrt{4+\sqrt x}dx&amp;=\int \sqrt{4+\sqrt x} \cdot\frac{\sqrt x}{\sqrt x}dx\\&amp;=\int \sqrt{4+\sqrt x} \cdot \sqrt x\cdot \frac{dx}{\sqrt x} (\sqrt x=u-4)\\&amp;=\int u^\frac{1}{2}\cdot (u-4)\cdot 2du\\&amp;=\int(2u^\frac{3}{2}-8u^\frac{1}{2}) du\\&amp;=\frac{2\cdot2u^\frac{5}{2}}5-\frac{2\cdot 8u^\frac{3}{2}}{3}+C\\&amp;=\frac{4\left (4+\sqrt x\right)^\frac{5}{2}}{5}-\frac{16\left(4+\sqrt x\right)^\frac{3}{2}}{3}+C.
 \end{aligned}
